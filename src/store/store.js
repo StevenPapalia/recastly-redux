@@ -7,10 +7,8 @@ import exampleVideoData from '../data/exampleVideoData.js';
 
 
 
-export default function configureStore(initialState) {
-  return createStore(
-    rootReducer,
-    initialState,
-    applyMiddleware(thunk)
-  );
-}
+export default createStore(
+  rootReducer,
+  { currentVideo: exampleVideoData[0], videoList: exampleVideoData },
+  applyMiddleware(thunk)
+);
