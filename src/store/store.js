@@ -7,10 +7,10 @@ import exampleVideoData from '../data/exampleVideoData.js';
 
 
 
-// export default function configureStore(initialState) {
-//   return createStore(
-//     rootReducer,
-//     initialState,
-//     applyMiddleware(thunk)
-//   );
-// }
+export default function configureStore(initialState) {
+  return createStore(
+    rootReducer,
+    initialState,
+    applyMiddleware(thunk)
+  );
+}
