@@ -10,16 +10,10 @@ var handleVideoSearch = (q) => {
   //TODO:  Write an asynchronous action to handle a video search!
   return _.debounce((dispatch) => {
 
-
     searchYouTube({key: YOUTUBE_API_KEY, query: q}, (videos) => {
       dispatch(changeVideo(videos[0]));
       dispatch(changeVideoList(videos));
-
-
-
     });
-
-
 
   }, 200);
 
